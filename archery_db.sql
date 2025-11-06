@@ -281,3 +281,78 @@ CREATE TABLE competition_entry (
         REFERENCES category(id) 
         ON DELETE RESTRICT
 ) ENGINE=InnoDB;
+
+-- -----------------------------------------------------
+-- Archery Score Recording Database DCL Script
+-- Scope: archer_role and recorder_role Creation and Permission Grants
+-- Course: COS20031 - Database Design Project
+-- Group 2: Powerpuff Girls (Dung, Trang, and Que An)
+-- -----------------------------------------------------
+
+-- -----------------------------------------------------
+-- 1. Create Security Roles and Users
+-- -----------------------------------------------------
+
+-- Step 1: Create the two required roles
+CREATE ROLE IF NOT EXISTS 
+    'archer_role' COMMENT 'For archers to submit scores and view results.',
+    'recorder_role' COMMENT 'For recorders to manage competitions and approve scores anonymously.';
+
+-- Step 2: Create the users (with strong passwords)
+-- The application will connect using one of these users.
+CREATE USER IF NOT EXISTS 'club_archer'@'localhost' IDENTIFIED BY 'user123';
+CREATE USER IF NOT EXISTS 'club_recorder'@'localhost' IDENTIFIED BY 'admin123';
+
+-- Step 3: Assign users to their roles
+GRANT 'archer_role' TO 'club_archer'@'localhost';
+GRANT 'recorder_role' TO 'club_recorder'@'localhost';
+
+-- -----------------------------------------------------
+-- 2. Grant Permissions for the ARCHER Role
+-- -----------------------------------------------------
+-- Purpose: Allows archers to submit their own scores (staging)
+-- and view all results, PBs, and round definitions.
+
+-- 2A. Permissions to READ/VIEW data:
+--    Archers can see *all* results (competitions, PBs, championships),
+--    including their names and other archers' names.
+GRANT SELECT ON archery_db.archer_info TO 'archer_role'; -- Can see names
+GRANT SELECT ON archery_db.archer TO 'archer_role';
+GRANT SELECT ON archery_db.session TO 'archer_role';
+GRANT SELECT ON archery_db.end TO 'archer_role';
+GRANT SELECT ON archery_db.arrow TO 'archer_role';
+GRANT SELECT ON archery_db.competition TO 'archer_role';
+GRANT SELECT ON archery_db.competition_entry TO 'archer_role';
+GRANT SELECT ON archery_db.round TO 'archer_role';
+GRANT SELECT ON archery_db.round_range TO 'archer_role';
+GRANT SELECT ON archery_db.category TO 'archer_role';
+GRANT SELECT ON archery_db.age_class TO 'archer_role';
+GRANT SELECT ON archery_db.division TO 'archer_role';
+GRANT SELECT ON archery_db.gender TO 'archer_role';
+
+-- 2B. Permissions to WRITE/SUBMIT data:
+--    Allows archers to enter scores into the "staging table"
+--    (i.e., create a 'Preliminary' session).
+GRANT INSERT ON archery_db.session TO 'archer_role';
+GRANT INSERT ON archery_db.end TO 'archer_role';
+GRANT INSERT ON archery_db.arrow TO 'archer_role';
+
+-- -----------------------------------------------------
+-- 3. Grant Permissions for the RECORDER Role
+-- -----------------------------------------------------
+-- Purpose: Allows the recorder to manage the *entire* database
+-- (enter new archers, rounds, competitions; approve scores)
+-- *except* for the ability to *read* archers' names.
+
+-- 3A. Grant broad management permissions on ALL tables
+GRANT ALL PRIVILEGES ON archery_db.* TO 'recorder_role'; -- Full control: insert, update, select, etc.
+
+-- 3B. ***** THE KEY SECURITY STEP *****
+--    Revoke the ability for the recorder to READ from archer_info.
+--    This makes score approval anonymous. They can still
+--    INSERT a new archer's name (which they only do once)
+--    but cannot look up an existing archer's name by their ID.
+REVOKE SELECT ON archery_db.archer_info FROM 'recorder_role';
+
+-- 3C. Finalize the permissions
+FLUSH PRIVILEGES;
