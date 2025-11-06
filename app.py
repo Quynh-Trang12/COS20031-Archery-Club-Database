@@ -5,14 +5,15 @@ from db_config import get_engine
 from models import Archer, Gender, Division, Base # Import models and Base
 import datetime
 
-# --- Database Setup ---
-# This part is global
-engine = get_engine()
-SessionLocal = sessionmaker(bind=engine)
+# --- Database Setup (cached to avoid re-initialization) ---
+@st.cache_resource
+def init_db():
+    """Initialize database engine and create tables (runs once per session)."""
+    engine = get_engine()
+    Base.metadata.create_all(engine)  # Ensure tables exist
+    return sessionmaker(bind=engine)
 
-# Ensure tables exist (good for development)
-# You can remove this in production if you use Alembic
-Base.metadata.create_all(engine) 
+SessionLocal = init_db() 
 
 # --- App ---
 st.title("🏹 Archery Score Recording")

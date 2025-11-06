@@ -15,7 +15,7 @@ def get_engine():
         username=db_creds['username'],
         password=db_creds['password'],
         host=db_creds['host'],
-        port=db_creds['port'],
+        port=int(db_creds['port']),  # Convert port to integer
         database=db_creds['database_name']
     )
     
