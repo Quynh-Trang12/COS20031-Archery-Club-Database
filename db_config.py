@@ -11,11 +11,11 @@ def get_engine():
     
     # Create the connection URL
     connection_url = URL.create(
-        drivername=f"{db_creds['db_type']}+pymysql",
+        drivername=f"{db_creds['db_type']}+{db_creds['driver']}",
         username=db_creds['username'],
         password=db_creds['password'],
         host=db_creds['host'],
-        port=int(db_creds['port']),  # Convert port to integer
+        port=db_creds['port'],
         database=db_creds['database_name']
     )
     
