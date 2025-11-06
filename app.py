@@ -80,7 +80,7 @@ with st.form("new_archer_form"):
                 session.commit()
                 
                 st.success(f"Successfully added new archer with ID: {new_archer.id}!")
-                st.experimental_rerun() # Rerun the script to show the new archer in the list
+                st.rerun() # Rerun the script to show the new archer in the list
                 
         except Exception as e:
             st.error(f"Error adding archer: {e}")
