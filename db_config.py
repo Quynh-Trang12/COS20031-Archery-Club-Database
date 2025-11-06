@@ -7,16 +7,16 @@ def get_engine():
     Creates and returns a SQLAlchemy engine configured from Streamlit secrets.
     """
     # Load secrets from Streamlit
-    db_creds = st.secrets["database"]
+    db_credentials = st.secrets["database"]
     
     # Create the connection URL
     connection_url = URL.create(
-        drivername=f"{db_creds['db_type']}+{db_creds['driver']}",
-        username=db_creds['username'],
-        password=db_creds['password'],
-        host=db_creds['host'],
-        port=db_creds['port'],
-        database=db_creds['database_name']
+        "mysql+mysqlclient",
+        username=db_credentials['username'],
+        password=db_credentials['password'],
+        host=db_credentials['host'],
+        port=db_credentials['port'],
+        database=db_credentials['database_name']
     )
     
     # Create and return the engine
