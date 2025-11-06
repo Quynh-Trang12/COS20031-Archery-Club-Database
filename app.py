@@ -18,7 +18,7 @@ try:
     # This single line replaces all of db_config.py
     # It automatically reads secrets from [connections.mysql]
     # and handles engine creation and caching.
-    conn = st.connection("database", type="sql")
+    conn = st.connection("mysql", type="sql")
     
     st.success("✅ Database connection successful!")
 
