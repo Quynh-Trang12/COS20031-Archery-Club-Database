@@ -1,8 +1,9 @@
 import datetime
 from sqlalchemy import (
     create_engine, String, Integer, SmallInteger, Date, Enum, 
-    ForeignKey, UniqueConstraint, CheckConstraint, TEXT, CHAR, BOOLEAN, YEAR
+    ForeignKey, UniqueConstraint, CheckConstraint, TEXT, CHAR, BOOLEAN
 )
+from sqlalchemy.dialects.mysql import YEAR
 from sqlalchemy.orm import DeclarativeBase, Mapped, mapped_column, relationship
 
 # --- 1. Base Class ---
