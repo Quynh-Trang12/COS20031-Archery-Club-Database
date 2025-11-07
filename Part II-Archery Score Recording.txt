@@ -1,0 +1,390 @@
+WEBVTT
+
+1
+00:00:01.666 --> 00:00:06.299
+Welcome to Part II of the introduction to Archery Recording. 
+
+2
+00:00:06.300 --> 00:00:11.633
+Here, we will look at what archers need from the system to get the information they want, 
+
+3
+00:00:11.633 --> 00:00:15.799
+and what the recorder needs to do to get their job done.
+
+4
+00:00:15.800 --> 00:00:24.200
+The main users of this system are the individual club members. 
+
+5
+00:00:24.200 --> 00:00:27.700
+They want to keep track of their shooting performance over time, 
+
+6
+00:00:27.700 --> 00:00:32.600
+and also find out how everyone else at the club is shooting. 
+
+7
+00:00:32.600 --> 00:00:38.633
+There is also a yearly competition that includes some of the club-internal competitions shot on weekends.
+
+8
+00:00:38.633 --> 00:00:44.133
+
+
+9
+00:00:44.133 --> 00:00:48.666
+Not every club member recalls the details of every round, 
+
+10
+00:00:48.666 --> 00:00:53.666
+and archers may shoot the wrong sequence if they cannot look up the details. 
+
+11
+00:00:53.666 --> 00:00:56.632
+The sequence of ranges in their correct order, 
+
+12
+00:00:56.633 --> 00:01:01.399
+with distance and target face, have to be stored. 
+
+13
+00:01:01.400 --> 00:01:06.300
+Whether you store the number of arrows or the number ends is not important.
+
+14
+00:01:06.300 --> 00:01:10.933
+
+
+15
+00:01:10.933 --> 00:01:15.666
+Archers always want to know how they progress in their shooting. 
+
+16
+00:01:15.666 --> 00:01:23.999
+Some archers train many times a week and over years, so we have to provide a time filter. 
+
+17
+00:01:24.000 --> 00:01:29.100
+The ability to filter by round helps with the comparison in performance, 
+
+18
+00:01:29.100 --> 00:01:36.800
+because the exact same distance and total number of arrows. 
+
+19
+00:01:36.800 --> 00:01:41.966
+There should always be a way to open the score and look at the details. 
+
+20
+00:01:41.966 --> 00:01:45.766
+
+
+21
+00:01:45.766 --> 00:01:49.632
+The score detail could look something like this. 
+
+22
+00:01:49.633 --> 00:01:55.099
+A Melbourne has three ranges all large face at 50m. 
+
+23
+00:01:55.100 --> 00:02:02.533
+Archers are interested in range totals as well as the trends in their individual ends over the round.
+
+24
+00:02:02.533 --> 00:02:07.833
+
+
+25
+00:02:07.833 --> 00:02:17.433
+Archers expect to drop their paper scoring and use a handheld device to score their ends at the target. 
+
+26
+00:02:17.433 --> 00:02:23.133
+These scores are preliminary, because they have to be confirmed by the club recorder, 
+
+27
+00:02:23.133 --> 00:02:25.866
+who has to do various checks. 
+
+28
+00:02:25.866 --> 00:02:33.099
+So there should be the possibility to distinguish between preliminary and final, confirmed scores.
+
+29
+00:02:33.100 --> 00:02:38.133
+
+
+30
+00:02:38.133 --> 00:02:45.299
+Archers want to have friendly, club-based competitions, where they can challenge each other. 
+
+31
+00:02:45.300 --> 00:02:48.700
+The database has to allow us to do listings for competitions 
+
+32
+00:02:48.700 --> 00:02:54.200
+where we can determine who won, 
+can determine who won, 
+
+33
+00:02:54.200 --> 00:02:57.633
+so it should be in largest-first order.
+
+34
+00:02:57.633 --> 00:03:01.333
+
+
+35
+00:03:01.333 --> 00:03:08.499
+The yearly club championship is a way to honour the best shooters of their categories at the end of the year. 
+
+36
+00:03:08.500 --> 00:03:15.266
+At the beginning of the year, the committee decides which rounds participate over the year. 
+
+37
+00:03:15.266 --> 00:03:25.999
+FITA is an old name for World Archery, so a FITA 90m is the WA1440 or its equivalents. 
+
+38
+00:03:26.000 --> 00:03:35.866
+We know that Open Male shoots WA90/1440 and Open Female shoots WA70/1440, 
+
+39
+00:03:35.866 --> 00:03:39.799
+therefore each category listing shows the appropriate round, 
+
+40
+00:03:39.800 --> 00:03:46.800
+the round that these people actually shot, rather than the nominal round. 
+
+41
+00:03:46.800 --> 00:03:51.166
+Canberra is the alternative name for the WA900. 
+
+42
+00:03:51.166 --> 00:04:00.099
+Both the best and second best scores of an archer are considered for the Canberra and WA1440, 
+
+43
+00:04:00.100 --> 00:04:08.000
+but for the Brisbane and the WA720, the committee decided to require only the best score. 
+
+44
+00:04:08.000 --> 00:04:13.466
+Requiring a larger number of scores means that the shooter who wins the club championship 
+
+45
+00:04:13.466 --> 00:04:20.232
+has actually been an active member, rather than turning up once or twice a year. 
+
+46
+00:04:20.233 --> 00:04:27.566
+Archers who have not shot at least the six scores required are not considered for the championship. 
+
+47
+00:04:27.566 --> 00:04:30.266
+Their totals are shown in red. 
+
+48
+00:04:30.266 --> 00:04:34.099
+Even if the red total was larger, the archer would not win, 
+
+49
+00:04:34.100 --> 00:04:38.133
+because they have not achieved the required number of scores.
+
+50
+00:04:38.133 --> 00:04:42.533
+
+
+51
+00:04:42.533 --> 00:04:48.299
+Every archer should be able to look up their best score for each round. 
+
+52
+00:04:48.300 --> 00:04:54.800
+Naturally, there are always rounds that someone has not shot, so these shouldn't show up in the listing. 
+
+53
+00:04:54.800 --> 00:04:59.766
+
+
+54
+00:04:59.766 --> 00:05:05.399
+Archers are also interested to see how they compare with other club members. 
+
+55
+00:05:05.400 --> 00:05:08.200
+Personal bests are division-specific. 
+
+56
+00:05:08.200 --> 00:05:14.700
+You can have two PBs for the same round, if you shot them with two different bow types.
+
+57
+00:05:14.700 --> 00:05:18.533
+
+
+58
+00:05:18.533 --> 00:05:24.566
+The club recorder looks after the scores and ensures that the entries are correct. 
+
+59
+00:05:24.566 --> 00:05:28.199
+It would be embarrassing to proclaim the wrong club champion, 
+
+60
+00:05:28.200 --> 00:05:36.433
+so you need a responsible person who can also advise members about their categories and the rounds they need to shoot. 
+
+61
+00:05:36.433 --> 00:05:42.966
+It would be good if the recorder could rely on the system to find out which category shoots which round.
+
+62
+00:05:42.966 --> 00:05:48.399
+
+
+63
+00:05:48.400 --> 00:05:52.700
+Whenever a new club member is ready to start recording their scores, 
+
+64
+00:05:52.700 --> 00:05:56.500
+they have to be added to the scoring system. 
+
+65
+00:05:56.500 --> 00:06:05.433
+We have to have enough information to determine the class of the archer, gender, and AV number, 
+
+66
+00:06:05.433 --> 00:06:09.866
+but we do not store anything else for privacy reasons. 
+
+67
+00:06:09.866 --> 00:06:18.966
+Members are already stored in the AA member database, so only scoring-related details are captured here. 
+
+68
+00:06:18.966 --> 00:06:26.332
+The ultimate identifier of an archer is the Archery Victoria number in the case of a Victorian archer. 
+
+69
+00:06:26.333 --> 00:06:33.133
+The other states have their own numbering so that an archer can be uniquely identified across Australia.
+
+70
+00:06:33.133 --> 00:06:36.599
+Birth dates are sensitive data. 
+
+71
+00:06:36.600 --> 00:06:42.600
+To determine the archer's class, you can make do with a birth year. 
+
+72
+00:06:42.600 --> 00:06:45.900
+Archers all age on 1 January. 
+
+73
+00:06:45.900 --> 00:06:49.433
+If your 50 birthday is in May this year, 
+
+74
+00:06:49.433 --> 00:06:58.666
+you can shoot the 50+ category for our gender and equipment from January this year.
+
+75
+00:06:58.666 --> 00:07:01.366
+The recorder rarely has to add new rounds. 
+
+76
+00:07:01.366 --> 00:07:10.999
+We have done this when members wanted to shoot a very old round or a round they had thought of themselves, something eccentric. 
+
+77
+00:07:11.000 --> 00:07:16.633
+This happens every few years, if ever. 
+
+78
+00:07:16.633 --> 00:07:23.966
+When we add a round, we have to determine the round name and ranges that form the round. 
+
+79
+00:07:23.966 --> 00:07:29.032
+
+
+80
+00:07:29.033 --> 00:07:33.299
+Club competitions don't always use equivalent rounds. 
+
+81
+00:07:33.300 --> 00:07:38.900
+If we shoot a short-distance round, or a round that does not have equivalent rounds, 
+
+82
+00:07:38.900 --> 00:07:42.866
+everyone at the club often shoots the same round. 
+
+83
+00:07:42.866 --> 00:07:51.966
+It is fair to assume that if a round does not have equivalent rounds, all archers shoot the same round.
+
+84
+00:07:51.966 --> 00:07:59.699
+The club championship generally runs for a year, from 1 January to 31 December. 
+
+85
+00:07:59.700 --> 00:08:04.633
+The winners in each category are announced over the Christmas get-together. 
+
+86
+00:08:04.633 --> 00:08:11.166
+Therefore, the recorder has to enter a new club championship at the beginning of the year. 
+
+87
+00:08:11.166 --> 00:08:18.599
+The participating rounds are decided by the committee, also how many scores per round are included. 
+
+88
+00:08:18.600 --> 00:08:23.900
+It's usually the best or best and second best.
+
+89
+00:08:23.900 --> 00:08:31.066
+The scores to be included in the club championship have to be shot in a competition with the same round.  
+
+90
+00:08:31.066 --> 00:08:37.799
+If a club championship includes a WA60/900, also known as a Canberra, 
+
+91
+00:08:37.800 --> 00:08:43.600
+we have to find all competitions with a Canberra as the nominal round. 
+
+92
+00:08:43.600 --> 00:08:47.333
+We then have to find the participating scores. 
+
+93
+00:08:47.333 --> 00:08:51.733
+For each archer, we choose the best of these scores. 
+
+94
+00:08:51.733 --> 00:08:57.266
+Two archers may have shot their best Canberra score in two different competitions. 
+
+95
+00:08:57.266 --> 00:08:58.632
+This is not a problem.
+
+96
+00:08:58.633 --> 00:09:07.699
+We just pick each archer's best score among the ones shot in competitions with a Canberra as the nominal round.
+
+97
+00:09:07.700 --> 00:09:15.933
+This concludes the introduction into how to score target archery.

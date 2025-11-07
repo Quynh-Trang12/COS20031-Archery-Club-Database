@@ -1,0 +1,792 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:05.800
+There are two parts to this introduction to archery scoring.
+
+2
+00:00:05.800 --> 00:00:12.166
+Part I explains the process of archery scoring, and the rules that govern competitions.
+
+3
+00:00:12.166 --> 00:00:16.066
+Part II talks about the requirements of the stakeholders. 
+
+4
+00:00:16.066 --> 00:00:19.966
+We only consider the case of target archery. 
+
+5
+00:00:19.966 --> 00:00:28.332
+Target archery is when you shoot outdoors on a level field at a standard size target. 
+
+6
+00:00:28.333 --> 00:00:34.999
+There are other disciplines, like indoor archery or field, where you follow a trail through the woods and shoot at pictures of animals, for example. 
+
+7
+00:00:35.000 --> 00:00:41.966
+We don't do any of that, so we only look at scoring target archery.
+ 
+ 
+
+8
+00:00:41.966 --> 00:00:48.266
+
+
+9
+00:00:48.266 --> 00:00:52.332
+Let's first look at what happens on the shooting range. 
+
+10
+00:00:52.333 --> 00:00:57.866
+Knowing the process helps us understand how the scores will enter the database.
+ 
+ 
+
+11
+00:00:57.866 --> 00:01:03.799
+
+
+12
+00:01:03.800 --> 00:01:14.733
+For outdoor target archery, you need a target butt that is soft but durable to absorb the arrow's energy without breaking it on impact. 
+
+13
+00:01:14.733 --> 00:01:20.233
+The target butt has to be the right size and height according to world archery rules. 
+
+14
+00:01:20.233 --> 00:01:28.166
+We don't have to worry about that, because it is the same everywhere and we don't have to store these measurements. 
+
+15
+00:01:28.166 --> 00:01:32.066
+What is more interesting is the paper that goes on the front of the butt. 
+
+16
+00:01:32.066 --> 00:01:38.266
+It has rings to allow us to aim at the middle of the target. 
+
+17
+00:01:38.266 --> 00:01:42.066
+We call that paper the target face. In target archery, 
+
+18
+00:01:42.066 --> 00:01:49.566
+we only have two options: 122 cm or 80 cm diameter. 
+
+19
+00:01:49.566 --> 00:01:54.599
+In everyday shooting, we only talk about large face and small face. 
+
+20
+00:01:54.600 --> 00:02:04.666
+In the picture, the right-most target has a small face. 
+
+21
+00:02:04.666 --> 00:02:09.332
+All other butts have a large face. 
+ 
+
+22
+00:02:09.333 --> 00:02:18.466
+
+
+23
+00:02:18.466 --> 00:02:23.066
+The target faces are almost self-explanatory. 
+
+24
+00:02:23.066 --> 00:02:28.466
+There are ten rings, and the closer your arrow is to the middle, the higher the score. 
+
+25
+00:02:28.466 --> 00:02:35.732
+An arrow in the inner ring scores a 10, an arrow in the outermost ring scores a 1. 
+
+26
+00:02:35.733 --> 00:02:39.133
+But what happens when an arrow lands outside the rings? 
+
+27
+00:02:39.133 --> 00:02:44.333
+If it is stuck somewhere in the grass or outside the rings in the target? 
+
+28
+00:02:44.333 --> 00:02:50.233
+To make things more tricky in terms of data types, we don't record this as a zero. 
+
+29
+00:02:50.233 --> 00:02:54.833
+We record it as a capital M for miss.
+
+30
+00:02:54.833 --> 00:02:59.833
+Now that we have introduced a letter among our numbers, we might as well introduce another. 
+
+31
+00:02:59.833 --> 00:03:07.833
+If you look really closely, there is a faint inner circle inside the 10-ring. 
+
+32
+00:03:07.833 --> 00:03:11.566
+
+
+33
+00:03:11.566 --> 00:03:16.499
+If your arrow lands inside this, you have done really well. 
+
+34
+00:03:16.500 --> 00:03:22.166
+It still counts as a 10, but it is recorded as an X. 
+
+35
+00:03:22.166 --> 00:03:29.899
+If two people shoot exactly the same total score in a competition, the one who has the most Xs wins.
+ 
+
+36
+00:03:29.900 --> 00:03:35.700
+
+
+37
+00:03:35.700 --> 00:03:40.566
+When it's time to shoot, all archers go to the shooting line. 
+
+38
+00:03:40.566 --> 00:03:44.766
+When they are allowed to shoot, they shoot their first arrow. 
+
+39
+00:03:44.766 --> 00:03:49.366
+After that, they shoot the next arrow whenever they feel like it. 
+
+40
+00:03:49.366 --> 00:03:53.532
+There is a time limit, but it's only enforced in competitions. 
+
+41
+00:03:53.533 --> 00:03:59.466
+When an archer has shot 6 arrows, they have completed their end and step back from the shooting line. 
+
+42
+00:03:59.466 --> 00:04:03.732
+We call 6 arrows an end.
+
+43
+00:04:03.733 --> 00:04:07.633
+
+
+44
+00:04:07.633 --> 00:04:13.799
+When the last archer has finished shooting, all archers walk towards the target. 
+
+45
+00:04:13.800 --> 00:04:18.633
+At each target, one person is the designated scorer 
+
+46
+00:04:18.633 --> 00:04:23.466
+who writes down the score on paper or scores it electronically. 
+
+47
+00:04:23.466 --> 00:04:28.266
+All  other archers 'call their scores' arrow by arrow. 
+
+48
+00:04:28.266 --> 00:04:34.499
+In this way, people can check whether each archer's score is recorded correctly. 
+
+49
+00:04:34.500 --> 00:04:37.800
+In national competitions, there is double scoring. 
+
+50
+00:04:37.800 --> 00:04:42.866
+Two people score and compare their totals at the end. 
+ 
+
+51
+00:04:42.866 --> 00:04:48.166
+
+
+52
+00:04:48.166 --> 00:04:52.266
+The scorer asks each archer for their score. 
+
+53
+00:04:52.266 --> 00:04:57.232
+The archer calls their own score arrow by arrow, largest to smallest. 
+
+54
+00:04:57.233 --> 00:05:11.666
+In this example, we would call X, X, X, 9, 7, 7. 
+
+55
+00:05:11.666 --> 00:05:15.132
+The order in which the arrows were shot does not matter. 
+
+56
+00:05:15.133 --> 00:05:20.666
+Eventually, the scorer will ask one of the other archers to call the scorer's own score.
+
+57
+00:05:20.666 --> 00:05:28.499
+If we score electronically, it is important to have the opportunity to type 6 tokens and then save.
+ 
+
+58
+00:05:28.500 --> 00:05:34.700
+
+
+59
+00:05:34.700 --> 00:05:41.266
+Categories exist to determine which archers can be fairly compared to each other. 
+
+60
+00:05:41.266 --> 00:05:49.132
+If people's strength and stamina is naturally different, it would not be fair to ask them to compete against each other. 
+
+61
+00:05:49.133 --> 00:05:59.399
+Categories are determined based on class - the age group of the shooter -, gender and division, which depends on the equipment an archer shoots.
+ 
+
+62
+00:05:59.400 --> 00:06:04.233
+
+
+63
+00:06:04.233 --> 00:06:07.899
+Let's start with divisions. 
+
+64
+00:06:07.900 --> 00:06:11.500
+Archery Australia recognises 6 divisions: 
+
+65
+00:06:11.500 --> 00:06:18.933
+Recurve, Barebow Recurve, Compound, Compound Barebow, Crossbow and Longbow. 
+
+66
+00:06:18.933 --> 00:06:23.966
+We are not allowed to shoot crossbow, therefore we omit it from our data model. 
+
+67
+00:06:23.966 --> 00:06:32.232
+Archers most often specialise in just one type of equipment, although some archers compete in two divisions. 
+
+68
+00:06:32.233 --> 00:06:40.466
+Very few shoot many different types of bows, but those archers often do not compete on a national level.
+
+69
+00:06:40.466 --> 00:06:50.299
+It is much easier to shoot good scores with compound than recurve bows or with recurve rather than recurve barebows. 
+
+70
+00:06:50.300 --> 00:06:55.333
+This is why equipment is part of the determination of category.
+
+71
+00:06:55.333 --> 00:07:03.199
+If you look at the national ranking list, the 20 or so best shooters shoot compound. 
+ 
+
+72
+00:07:03.200 --> 00:07:10.800
+
+
+73
+00:07:10.800 --> 00:07:18.433
+Archery requires upper body strength, and this varies significantly between genders and age groups. 
+
+74
+00:07:18.433 --> 00:07:23.999
+Therefore, every archer is in their own class and gender. 
+
+75
+00:07:24.000 --> 00:07:31.566
+Open Male, 50+ Female, Under 14 Male are examples of class and gender combinations. 
+
+76
+00:07:31.566 --> 00:07:38.832
+Persons between 21 and 49 years old must shoot in the Open class. 
+
+77
+00:07:38.833 --> 00:07:43.266
+50+ are people 50 years or older. 
+
+78
+00:07:43.266 --> 00:07:48.832
+Under 18 is for 17 or 16-year-olds.
+
+79
+00:07:48.833 --> 00:07:57.933
+Everyone is always allowed to shoot in a higher class than their age-based class, that is, in a more demanding class. 
+
+80
+00:07:57.933 --> 00:08:01.499
+Open is the most demanding class. 
+
+81
+00:08:01.500 --> 00:08:06.933
+The higher the class, the larger the distances archers are required to shoot. 
+
+82
+00:08:06.933 --> 00:08:12.366
+To reach large distances, you have to have a powerful bow. 
+
+83
+00:08:12.366 --> 00:08:16.066
+Powerful bows are heavier to pull.
+
+84
+00:08:16.066 --> 00:08:20.332
+If a 70+ Male feels up to it, he can shoot open. 
+
+85
+00:08:20.333 --> 00:08:28.099
+He can also shoot 60+ or 50+, because these classes are more demanding than 70+.
+ 
+
+86
+00:08:28.100 --> 00:08:34.166
+
+
+87
+00:08:34.166 --> 00:08:37.832
+For practice scores, the class is not that important. 
+
+88
+00:08:37.833 --> 00:08:41.866
+When we compete informally, we might also ignore it. 
+
+89
+00:08:41.866 --> 00:08:48.032
+Even with practice scores, the bow type always has to be recorded. 
+
+90
+00:08:48.033 --> 00:08:59.633
+A score that looks terrible for a compound bow might be quite respectable for recurve, so there is no point in recording a score without stating the equipment.
+
+91
+00:08:59.633 --> 00:09:04.399
+Whenever we compete, we have to nominate our whole category. 
+
+92
+00:09:04.400 --> 00:09:10.800
+As discussed, we can shoot in a more demanding category, but not an easier one. 
+
+93
+00:09:10.800 --> 00:09:16.433
+An 18-year-old cannot compete against under 16s.
+
+94
+00:09:16.433 --> 00:09:18.633
+Gender is always fixed. 
+
+95
+00:09:18.633 --> 00:09:22.666
+You cannot shoot in a category of the opposite gender. 
+ 
+
+96
+00:09:22.666 --> 00:09:27.632
+
+
+97
+00:09:27.633 --> 00:09:38.133
+Whether we score on paper or electronically, whenever we start a shoot, each archer first fills in the scoresheet with their details. 
+
+98
+00:09:38.133 --> 00:09:45.099
+This example is from an official Archery Australia score sheet, as used in a national competition. 
+
+99
+00:09:45.100 --> 00:09:50.466
+You can see that gender, class and division are mandatory information.
+
+100
+00:09:50.466 --> 00:10:10.332
+In case you are wondering, RGB means regional governing body and AV stands for Archery Victoria. 
+
+101
+00:10:10.333 --> 00:10:20.366
+The club is Sherbrooke Archers, where this shooter is registered as a member, so she was representing this club. 
+
+102
+00:10:20.366 --> 00:10:30.199
+In our database, RGB and Club are implied, because all our members belong to the same club and the club is always under Archery Victoria.
+
+103
+00:10:30.200 --> 00:10:35.033
+The archer also has to indicate what round they are shooting. 
+
+104
+00:10:35.033 --> 00:10:38.099
+Let's talk about rounds next.
+ 
+
+105
+00:10:38.100 --> 00:10:43.966
+
+
+106
+00:10:43.966 --> 00:10:52.799
+We have learned that archers shoot ends, but we haven't yet discussed how ends can be combined to make for an interesting shoot. 
+
+107
+00:10:52.800 --> 00:10:57.933
+Archery is all about consistency and being able to repeat good shots many times. 
+
+108
+00:10:57.933 --> 00:11:03.099
+Testing stamina, strength and technique takes a larger number of ends. 
+
+109
+00:11:03.100 --> 00:11:08.200
+That's why we define rounds as a combination of several ends.
+
+110
+00:11:08.200 --> 00:11:16.766
+The smallest number of ends you can shoot as a round, which you can record as a score, is six. 
+
+111
+00:11:16.766 --> 00:11:20.332
+This makes for a practice round at a distance of your choosing. 
+
+112
+00:11:20.333 --> 00:11:23.399
+It would never do for a competition. 
+
+113
+00:11:23.400 --> 00:11:30.333
+The shortest competition round is 72 arrows or 12 ends.  
+
+114
+00:11:30.333 --> 00:11:35.966
+The longest round is 144 arrows, which means 24 ends. 
+ 
+
+115
+00:11:35.966 --> 00:11:41.632
+
+
+116
+00:11:41.633 --> 00:11:48.533
+To better organise different distances in a round, we introduce the concept of a range.
+
+117
+00:11:48.533 --> 00:11:54.666
+A range is a number of ends with the same face size and the same distance. 
+
+118
+00:11:54.666 --> 00:12:00.232
+The distance nor face size will never change in the middle of a range.
+
+119
+00:12:00.233 --> 00:12:04.966
+Several ranges make up a round. 
+
+120
+00:12:04.966 --> 00:12:09.132
+All ranges of a round have the same number of ends. 
+
+121
+00:12:09.133 --> 00:12:16.699
+There are rounds that have all 5-end ranges and rounds that have all 6-end ranges. 
+
+122
+00:12:16.700 --> 00:12:25.833
+That's it. Although there is no rule preventing you from making rounds for your club that have, say, 4-ranges, 
+
+123
+00:12:25.833 --> 00:12:31.599
+there are no official AA rounds with 4-end ranges.
+
+124
+00:12:31.600 --> 00:12:36.300
+Given all ranges of a round have the same number of ends, 
+
+125
+00:12:36.300 --> 00:12:40.033
+you could assume that the number of ends is a property of the round. 
+
+126
+00:12:40.033 --> 00:12:45.533
+Then again, the number of ends describes the number of ends in each round, 
+
+127
+00:12:45.533 --> 00:12:49.133
+so this is debatable. 
+
+128
+00:12:49.133 --> 00:12:53.966
+Archers often just talk about the number of arrows shot rather than the ends. 
+
+129
+00:12:53.966 --> 00:12:59.932
+As we shoot 6 arrows, you just have to multiply the number of ends by 6. 
+
+130
+00:12:59.933 --> 00:13:04.833
+So we can have 36-arrow or 30-arrow ranges.
+ 
+
+131
+00:13:04.833 --> 00:13:11.699
+This is part of the AA listing of official rounds. 
+
+132
+00:13:11.700 --> 00:13:18.133
+The longest one requires us to shoot 144 arrows before it is complete. 
+
+133
+00:13:18.133 --> 00:13:24.133
+The second-longest round is a round with 120 arrows, the third-longest 
+
+134
+00:13:24.133 --> 00:13:29.333
+90 arrows and the shortest has 72 arrows only.
+
+135
+00:13:29.333 --> 00:13:32.833
+You can see how the ranges are defined in the middle. 
+
+136
+00:13:32.833 --> 00:13:38.799
+We have 8 distances, the shortest is 10m and the longest 90m. 
+
+137
+00:13:38.800 --> 00:13:42.033
+You might notice that 80 m is missing. 
+
+138
+00:13:42.033 --> 00:13:48.533
+Older archers tell us that this is to do with the changeover from yards to the metric system.
+
+139
+00:13:48.533 --> 00:13:55.333
+You can see how the ranges are defined in terms of numbers of arrows (30 or 36) 
+
+140
+00:13:55.333 --> 00:13:59.833
+followed by a + or a *. 
+
+141
+00:13:59.833 --> 00:14:06.133
+The + is shorthand for a large face, the * stands for a small face. 
+
+142
+00:14:06.133 --> 00:14:10.833
+How can you tell what order you shoot these ranges in? 
+
+143
+00:14:10.833 --> 00:14:12.933
+It's simple. 
+
+144
+00:14:12.933 --> 00:14:15.766
+You always shoot the longer distances first. 
+
+145
+00:14:15.766 --> 00:14:22.099
+As you get tired, you can do with a bit of a pot shot at close range. 
+
+146
+00:14:22.100 --> 00:14:28.033
+Looking at this table, you can work out what to do if you shoot, say, a Brisbane. 
+
+147
+00:14:28.033 --> 00:14:33.899
+You set the target at 70m with a large face on it in the morning. 
+
+148
+00:14:33.900 --> 00:14:36.533
+When you have shot your first five ends, 
+
+149
+00:14:36.533 --> 00:14:39.433
+you shift the target to 60 m. 
+
+150
+00:14:39.433 --> 00:14:44.633
+After another 5 ends, you move to 50 m and change to a small face. 
+
+151
+00:14:44.633 --> 00:14:50.699
+By about midday you have finished shooting your last five ends at 40m. 
+ 
+
+152
+00:14:50.700 --> 00:14:54.833
+
+
+153
+00:14:54.833 --> 00:14:59.499
+Rounds that are suitable for young, strong adults are not always suitable for 
+
+154
+00:14:59.500 --> 00:15:02.133
+younger or older archers. 
+
+155
+00:15:02.133 --> 00:15:07.866
+When you are 14 years old, you cannot shoot a bow that would reach 90 m. 
+
+156
+00:15:07.866 --> 00:15:14.499
+Running national competitions, the organising club nominates a base round, or nominal round, 
+
+157
+00:15:14.500 --> 00:15:18.933
+that applies to Open Male Compound and Recurve categories, 
+
+158
+00:15:18.933 --> 00:15:23.033
+which shoot the longest distances.
+
+159
+00:15:23.033 --> 00:15:27.833
+Then, they consult AA documents for the appropriate rounds for 
+
+160
+00:15:27.833 --> 00:15:33.233
+each of the signed-up archer and their chosen category. 
+ 
+
+161
+00:15:33.233 --> 00:15:36.766
+
+
+162
+00:15:36.766 --> 00:15:42.332
+AA used to list 7 rounds as base rounds for competitions, 
+
+163
+00:15:42.333 --> 00:15:45.199
+now there are only 3. 
+
+164
+00:15:45.200 --> 00:15:53.233
+The hardest round, WA90/1440, is shot by Open Male Compound or Recurve. 
+
+165
+00:15:53.233 --> 00:15:58.433
+90 means 90 m is the longest distance. 
+
+166
+00:15:58.433 --> 00:16:04.133
+As the longest range is always shot first, it starts with 90 m. 
+
+167
+00:16:04.133 --> 00:16:11.433
+1440 means the maximum possible score is 1440, 
+
+168
+00:16:11.433 --> 00:16:15.299
+because we have four 36-arrow ranges. 
+
+169
+00:16:15.300 --> 00:16:23.800
+The maximum score per arrow is 10, so we have 360 x 4. 
+
+170
+00:16:23.800 --> 00:16:29.966
+You can find the definitions of the rounds back on slide 15.
+ 
+
+171
+00:16:29.966 --> 00:16:34.966
+
+
+172
+00:16:34.966 --> 00:16:40.866
+In this example, the base round is WA90/1440. 
+
+173
+00:16:40.866 --> 00:16:46.232
+It has four equivalent rounds, two on an international level and 
+
+174
+00:16:46.233 --> 00:16:49.699
+two additional ones on the national level. 
+
+175
+00:16:49.700 --> 00:16:56.333
+AA means Archery Australia whereas WA means World Archery.
+
+176
+00:16:56.333 --> 00:17:00.733
+This chart confirms that male open recurve and compound shooters 
+
+177
+00:17:00.733 --> 00:17:02.966
+shoot the base round. 
+
+178
+00:17:02.966 --> 00:17:08.999
+Males between 18 and 20 years of age are also 
+
+179
+00:17:09.000 --> 00:17:12.433
+considered strong enough for 90m, but they have their own category anyway. 
+
+180
+00:17:12.433 --> 00:17:17.299
+This is so that they don't have to compete with older, more experienced males 
+
+181
+00:17:17.300 --> 00:17:24.233
+and can win their own category, even though they have to shoot the hardest round to do it.
+
+182
+00:17:24.233 --> 00:17:31.633
+If you are over 70 and female, you shoot an AA50/1440. 
+
+183
+00:17:31.633 --> 00:17:37.999
+But if you are male and over 70, you have to be a longbow shooter to 
+
+184
+00:17:38.000 --> 00:17:40.233
+shoot this round. 
+
+185
+00:17:40.233 --> 00:17:45.899
+If you shoot anything else, you have to shoot the WA60/1440. 
+
+186
+00:17:45.900 --> 00:17:52.033
+The reasoning for this is that male 70-year-olds with a recurve or compound bow 
+
+187
+00:17:52.033 --> 00:17:58.566
+are still strong enough to reach 60m, but women are only strong enough to reach 50m. 
+
+188
+00:17:58.566 --> 00:18:02.499
+Of course, people are different, and some are stronger while others are weaker. 
+
+189
+00:18:02.500 --> 00:18:07.733
+That's why ultimately, you can always choose a harder category, 
+
+190
+00:18:07.733 --> 00:18:11.299
+unless you already are in the Open category.
+ 
+
+191
+00:18:11.300 --> 00:18:15.200
+
+
+192
+00:18:15.200 --> 00:18:18.200
+This concludes part I. 
+
+193
+00:18:18.200 --> 00:18:24.966
+Continued in Part II.
